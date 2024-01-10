@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  parser:
+    build: .
+    image: parser
+    container_name: parser
+    ports:
+      - 9000:9000
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - FLASK_DEBUG=1
